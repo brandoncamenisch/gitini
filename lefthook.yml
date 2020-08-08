@@ -1,3 +1,4 @@
+# docker login docker.pkg.github.com --username ...
 pre-commit:
   commands:
     build-docker:
