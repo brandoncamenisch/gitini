@@ -2,7 +2,7 @@
 pre-commit:
   commands:
     build-docker:
-      run: docker build -t docker.pkg.github.com/brandoncamenisch/gemini/gemini:latest .
+      run: docker build -t docker.pkg.github.com/brandoncamenisch/gitini/gitini:latest .
 
     push-docker:
-      run: docker push docker.pkg.github.com/brandoncamenisch/gemini/gemini:latest
+      run: docker push docker.pkg.github.com/brandoncamenisch/gitini/gitini:latest
