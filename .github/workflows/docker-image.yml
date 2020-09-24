@@ -8,8 +8,8 @@ jobs:
      build:
        runs-on: ubuntu-latest
        steps:
-         - name: GithubPackages-Docker
-          uses: Kolkies/githubpackages-docker@v1.0.4
-            with:
-              repo-token: {{ GITHUB_TOKEN }}
-              image-name: {{GITHUB_REPOSITORY}}:{{ GITHUB_REF }}
+        - name: GithubPackages-Docker
+       uses: Kolkies/githubpackages-docker@v1.0.4
+       with:
+         repo-token: {{ GITHUB_TOKEN }}
+         image-name: {{GITHUB_REPOSITORY}}:{{ GITHUB_REF }}
