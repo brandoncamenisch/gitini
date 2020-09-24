@@ -10,6 +10,6 @@ jobs:
        steps:
         - name: GithubPackages-Docker
        uses: Kolkies/githubpackages-docker@v1.0.4
-       with:
-         repo-token: {{ GITHUB_TOKEN }}
-         image-name: {{GITHUB_REPOSITORY}}:{{ GITHUB_REF }}
+         with:
+           repo-token: {{ GITHUB_TOKEN }}
+           image-name: {{GITHUB_REPOSITORY}}:{{ GITHUB_REF }}
