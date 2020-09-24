@@ -16,3 +16,12 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build -t docker.pkg.github.com/{{ GITHUB_REPOSITORY }}:{{ GITHUB_REF }} .
+    
+    - name: Build and push Docker images
+    uses: docker/build-push-action@v1.1.1
+    with:
+      username: brandoncamenisch optional
+      password: {{ GITHUB_TOKEN }}
+      registry: docker.pkg.github.com
+      repository: {{ GITHUB_REPOSITORY }}
+      tags: {{ GITHUB_REF }}
