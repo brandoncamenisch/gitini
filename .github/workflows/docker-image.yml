@@ -8,9 +8,6 @@ jobs:
      build:
        runs-on: ubuntu-latest
        steps:
-         - name: Build the Docker image
-           uses: actions/checkout@v2
-           run: docker build -t docker.pkg.github.com/{{ GITHUB_REPOSITORY }}:{{ GITHUB_REF }} .
          - name: Build and push Docker images
            uses: docker/build-push-action@v1.1.1
            with:
