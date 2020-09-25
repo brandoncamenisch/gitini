@@ -1,4 +1,4 @@
-ame: Default Branch Migration
+name: Default Branch Migration
 on: 
    push:
      branches:
