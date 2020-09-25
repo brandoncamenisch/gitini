@@ -1,0 +1,18 @@
+ame: Default Branch Migration
+on: 
+   push:
+     branches:
+       - master
+       - main
+
+jobs:
+  migrate_branch:
+    name: Migrate Branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Migrate
+        uses: liyanchang/default-branch-migration@v1.0.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          previous_default: master
+          new_default: main
